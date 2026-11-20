@@ -1,0 +1,16 @@
+[project]
+name = "localbox"
+version = "0.1.0"
+description = "Per-repo rootless Podman dev box you can ssh into"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+localbox = "localbox.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/localbox"]
